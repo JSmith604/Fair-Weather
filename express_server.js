@@ -18,27 +18,22 @@ app.get("/weather", (req, res) => {
   })
 });
 
+// To test api type http://localhost:8080/forecast?q=Vancouver,canada (insert city and country of your choice)
 app.get("/forecast", async (req, res) => {
-  // const forecast = () => {
-    const location = req.query.q
-    const urlToFetch = `${weatherUrl}?q=${location}&appid=${apiKey}`;
+  const location = req.query.q
+  const urlToFetch = `${weatherUrl}?q=${location}&appid=${apiKey}`;
     try {
-      const response = await fetch(urlToFetch);
-      console.log(urlToFetch)
-        if(response.ok) {
-          const jsonResponse = await response.json();
-          // console.log(jsonResponse);
-          res.send(jsonResponse);
-        }
+    const response = await fetch(urlToFetch);
+    // console.log(urlToFetch)
+      if(response.ok) {
+        const jsonResponse = await response.json();
+        res.send(jsonResponse);
       }
-    catch(error) {
-      console.log(error);
-      }
-    // }
-    // console.log("before")
-    // forecast();
-    // console.log("after")
-  });
+    }
+  catch(error) {
+    console.log(error);
+  }
+});
   
 app.listen(PORT, () => { //see if server is listening in terminal
   console.log(`Listening on port ${PORT}!`);

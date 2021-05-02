@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   res.send("Hello!");
 });
 
-app.get("/weather", (req, res) => {
+app.get("/weather", (req, res) => { //test with hard coded data
   res.status(200).send({
     weather: 'sunny',
     city: 'Vancouver'
@@ -24,7 +24,6 @@ app.get("/forecast", async (req, res) => {
   const urlToFetch = `${weatherUrl}?q=${location}&appid=${apiKey}`;
     try {
     const response = await fetch(urlToFetch);
-    // console.log(urlToFetch)
       if(response.ok) {
         const jsonResponse = await response.json();
         res.send(jsonResponse);

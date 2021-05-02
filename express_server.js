@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
 const PORT = 8080; // default port 8080
-require('dotenv').config; //get env data
+require('dotenv').config(); //get env data
+const fetch = require("node-fetch");
 
-const weatherUrl = "http://api.openweathermap.org/data/2.5/weather?q=London,uk"
+const weatherUrl = "http://api.openweathermap.org/data/2.5/weather"
 apiKey = process.env.API_KEY
 
 app.get("/", (req, res) => {
@@ -17,22 +18,26 @@ app.get("/weather", (req, res) => {
   })
 });
 
-app.get("/forecast", (req, res) => {
-  const forecast = async () => {
-    const urlToFetch = `${weatherUrl}&appid=${apiKey}`;
+app.get("/forecast", async (req, res) => {
+  // const forecast = () => {
+    const location = req.query.q
+    const urlToFetch = `${weatherUrl}?q=${location}&appid=${apiKey}`;
     try {
       const response = await fetch(urlToFetch);
+      console.log(urlToFetch)
         if(response.ok) {
           const jsonResponse = await response.json();
-          console.log(jsonResponse);
-          return jsonResponse;
+          // console.log(jsonResponse);
+          res.send(jsonResponse);
         }
       }
     catch(error) {
       console.log(error);
       }
-    }
-    console.log(forecast)
+    // }
+    // console.log("before")
+    // forecast();
+    // console.log("after")
   });
   
 app.listen(PORT, () => { //see if server is listening in terminal

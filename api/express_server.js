@@ -18,7 +18,7 @@ app.get("/weather", (req, res) => { //test with hard coded data
   })
 });
 
-// To test api type http://localhost:8080/forecast?q=Vancouver,canada (insert city and country of your choice)
+// To test api type http://localhost:8080/forecast?q=Vancouver,canada (insert city and country of your choice to see weather for difference places, also works if you type the city with no country)
 app.get("/forecast", async (req, res) => {
   const location = req.query.q
   const urlToFetch = `${weatherUrl}?q=${location}&appid=${apiKey}`;

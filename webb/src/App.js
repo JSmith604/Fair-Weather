@@ -5,6 +5,7 @@ import './App.css';
 import { Button, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Wrapper from "./components/wrapper";
+import Main from "./components/wrapper";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Button>See Weather</Button>
       </header>
     </div>
+    <Main/>
   </Wrapper>
   )
 }

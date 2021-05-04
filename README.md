@@ -7,3 +7,5 @@ To Run API on Localhost
     "node-fetch": "^2.6.1"
 4. Start the server with node express_server.js
 5. To test api type http://localhost:8080/forecast?q=Vancouver,canada (insert city and country of your choice to see weather for difference places, also works if you type the city with no country)
+
+ "axios": "^0.21.1",

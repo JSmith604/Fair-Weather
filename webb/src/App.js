@@ -12,17 +12,14 @@ import axios from 'axios';
 
 function App() {
   const [city, setCity] = useState('');
-  // const api = axios.create({
-  //   baseURL: `http://localhost:8080/forecast?q=`
-  // })
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const value = city;
-    console.log({ value });
-    // axios.get(`http://localhost:8080/forecast?q=${value}`)
+    const weatherResult = await axios.get(`http://localhost:8080/forecast?q=${city}`);
 
+    console.log({weatherResult})
   }
 
   const handleChange = (event) => {
@@ -33,7 +30,9 @@ function App() {
    <Wrapper>
     <div className="App">
       <header className="App-header">
+
         <img src={websiteLogo} alt="logo"/>
+
           <Form onSubmit={handleSubmit}>
             <Form.Group>
               <Form.Label>Location</Form.Label>

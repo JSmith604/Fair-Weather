@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const PORT = 8080; // default port 8080
 require('dotenv').config(); //get env data
@@ -7,6 +8,7 @@ const fetch = require("node-fetch");
 const weatherUrl = "http://api.openweathermap.org/data/2.5/weather"
 apiKey = process.env.API_KEY
 
+app.use(cors())
 app.get("/", (req, res) => {
   res.send("Hello!");
 });

@@ -10,7 +10,7 @@ const Main = () => { //Main component handles state changes and events
 
   const handleSubmit = async (event) => { //Handles axios calls to the backend api
     event.preventDefault();
-    const weatherResult = await axios.get(`http://localhost:8080/forecast?q=${city}`);
+    const weatherResult = await axios.get(`https://fair-weather-api-syrgy.ondigitalocean.app/forecast?q=${city}`);
     setWeather(weatherResult.data.weather[0])
     setTemp(weatherResult.data.main.temp)
   }

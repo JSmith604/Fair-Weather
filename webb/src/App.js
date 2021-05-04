@@ -1,5 +1,4 @@
 import React from 'react';
-// import logo from './logo.svg';
 import websiteLogo from './websiteLogo.png';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';

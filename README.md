@@ -15,11 +15,9 @@ https://fair-weather-ocqsx.ondigitalocean.app/
 
 10-12 hours
 
-### Tech Stack (React and Express)
+### Tech Stack (React/ Express)
 
-Express back end
-
-I chose to work with Express because it is easy to set-up and I find that the pattern for making requests is reasonably intuitive. It is also the backend framework that I have worked with the most in the past. 
+I chose to work with Express on the back end because it is easy to set-up and I find that the pattern for making requests is reasonably intuitive. It is also the backend framework that I have worked with the most in the past. 
 
 Express Strengths- Fast to set up, Easy to use, Works well with Node, Many NPM packages available 
 Express Weaknesses- Express lacks helpful error messages, console.log's are often the only way to debug
@@ -67,7 +65,7 @@ The API can be tested locally with or without the frontend.
 
 To test the API separately:
 
-1. Clone this git repository and cd into the top level directory (Fair-Weather)
+1. Clone this git repository and cd into the top-level directory (Fair-Weather)
 2. Make sure Node and NPM are installed 
 3. Cd into the backend folder (api) and install the dependencies:
     "dotenv": "^8.2.0",

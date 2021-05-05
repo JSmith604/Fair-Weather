@@ -13,9 +13,23 @@ https://fair-weather-ocqsx.ondigitalocean.app/
 
 ### Time spent
 
-About 10-12 hours
+10-12 hours
 
-### Assumptions made
+### Tech Stack (React and Express)
+
+Express back end
+
+I chose to work with Express because it is easy to set-up and I find that the pattern for making requests is reasonably intuitive. It is also the backend framework that I have worked with the most in the past. 
+
+Express Strengths- Fast to set up, Easy to use, Works well with Node, Many NPM packages available 
+Express Weaknesses- Express lacks helpful errror messages, console.log's are often the only way to debug
+
+I chose to work with React on the front end for the opposite reason. I do not have much experience with React, but it is becoming increasing popular and I wanted to use this challenge as an opportunity to learn new skills. 
+
+React Strengths- `create-react-app` ensures a quick set-up , Works well with Axios and Bootstrap, Fast load time
+React Weaknesses- Not necessarily a weakness, but I found that the declarative nature of React and the level of abstraction made the learning curve steep. 
+
+### Aassumptions made
 
 Throughout this assignment, I made several assumptions about what type of data users would like to see for their weather forecast. 
 

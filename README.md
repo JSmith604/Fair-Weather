@@ -65,9 +65,10 @@ The API can be tested locally with or without the frontend.
 
 To test the API separately:
 
-1. Clone this git repository and cd into the top-level directory (Fair-Weather)
-2. Make sure Node and NPM are installed 
-3. Cd into the backend folder (api) and install the dependencies:
+1. Clone this git repository 
+2. `cd Fair-Weather`
+3. Make sure Node and NPM are installed 
+4.  `cd api` and install the dependencies:
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1"
@@ -80,7 +81,7 @@ To test the API separately:
 To run the back end and front end together:
 
 1. Complete steps 1-4 of "To test the API separately" if you haven't already. 
-2. Open another terminal and cd Fair-Weather/webb
+2. Open another terminal and `cd Fair-Weather/webb`
 3. Install the dependencies: 
     "axios": "^0.21.1"
 4. Type `npm start`

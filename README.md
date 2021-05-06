@@ -93,6 +93,9 @@ I think that I could have worked more on the CSS to make the UI more pleasing. A
 
 There are other ways this project could be improved such as; adding authentication, adding a database and adding additional features. However, I decided early on that these stretch goals would be outside the scope of my project and I am satisfied with that decision.  Overall, I am happy that I was able to complete the core requirement and the majority of the stretch goals. 
 
+### Other Information about your submission that you feel it's iimportant that we know if applicable
+
+I am currently seeking a junior position and I hope that is taken into account when this project is evaluated, despite the fact that it is an intermediate assessment. I am aware that this submission is not perfect, however, I learned a lot and was able to pick up new technologies. 
 
 ### Your feedback on this technical challenge
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Col } from 'react-bootstrap';
 import WeatherResult from "./WeatherResult";
 
 const Main = () => { //Main component handles state changes and events
@@ -23,12 +23,14 @@ const Main = () => { //Main component handles state changes and events
         <Form onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Label>Location</Form.Label>
-            <Form.Control
-              type="text"
-              name="city"
-              onChange={handleChange}
-              placeholder="Enter your city"
-            />
+            <Col md={{ span: 4, offset: 4 }}>
+              <Form.Control
+                type="text"
+                name="city"
+                onChange={handleChange}
+                placeholder="Enter your city"
+              />
+            </Col>
           </Form.Group>
           <Button type="submit">See Weather</Button>
         </Form>
